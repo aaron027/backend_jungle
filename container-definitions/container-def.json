@@ -1,0 +1,21 @@
+[
+    {
+      "name": "myapp-service",
+      "image": "026376606405.dkr.ecr.ap-southeast-2.amazonaws.com/workshop:latest",
+      "cpu": 512,
+      "memory": 1024,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": { 
+          "awslogs-group" : "jungle-container",
+          "awslogs-region": "ap-southeast-2"
+        }
+      }
+    }
+]
